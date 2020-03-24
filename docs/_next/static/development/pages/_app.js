@@ -549,7 +549,7 @@ var SitesList = function SitesList(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_URL", function() { return BASE_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GRAPHQL_URL", function() { return GRAPHQL_URL; });
-var BASE_URL = "/a11y-dashboard-gdrv";
+var BASE_URL = "/a11y-dashboard-newmar";
 var GRAPHQL_URL = "http://localhost:3037/graphql";
 
 /***/ }),
@@ -49433,7 +49433,7 @@ var route_regex_1 = __webpack_require__(/*! ./utils/route-regex */ "./node_modul
 
 function addBasePath(path) {
   // @ts-ignore variable is always a string
-  var p = "/a11y-dashboard-gdrv";
+  var p = "/a11y-dashboard-newmar";
   return path.indexOf(p) !== 0 ? p + path : path;
 }
 

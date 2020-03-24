@@ -381,7 +381,7 @@ var StatusChips = react__WEBPACK_IMPORTED_MODULE_3___default.a.forwardRef(functi
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_URL", function() { return BASE_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GRAPHQL_URL", function() { return GRAPHQL_URL; });
-var BASE_URL = "/a11y-dashboard-gdrv";
+var BASE_URL = "/a11y-dashboard-newmar";
 var GRAPHQL_URL = "http://localhost:3037/graphql";
 
 /***/ }),

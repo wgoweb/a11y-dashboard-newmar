@@ -168,6 +168,10 @@ var styles = function styles(theme) {
     },
     noticeExpandIcon: {
       color: theme.palette.info.contrastText
+    },
+    selectorContainer: {
+      fontStyle: 'italic',
+      wordBreak: 'break-all'
     }
   });
 };
@@ -270,7 +274,7 @@ var getTechniqueLink = function getTechniqueLink(technique) {
     href: url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 132
     },
     __self: this
   }, technique);
@@ -281,7 +285,7 @@ var messageList = function messageList(issueMessages, stylesProps) {
   return __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 139
     },
     __self: this
   }, issueMessages.map(function (im, imIndex) {
@@ -289,21 +293,21 @@ var messageList = function messageList(issueMessages, stylesProps) {
       key: imIndex,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 141
       },
       __self: this
     }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
       component: "span",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138
+        lineNumber: 142
       },
       __self: this
     }, im.criterion, ": ", im.message), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
       component: "div",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
+        lineNumber: 145
       },
       __self: this
     }, "Techniques: ", im.techniques.map(function (t, i) {
@@ -314,14 +318,14 @@ var messageList = function messageList(issueMessages, stylesProps) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 147
         },
         __self: this
       }, getTechniqueLink(t));
     })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["List"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 146
+        lineNumber: 150
       },
       __self: this
     }, im.items.map(function (item, itemIndex) {
@@ -330,35 +334,30 @@ var messageList = function messageList(issueMessages, stylesProps) {
         className: classes.messageListItem,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 152
         },
         __self: this
       }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
         color: "primary",
-        component: "div",
+        component: "em",
+        className: classes.selectorContainer,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 153
         },
         __self: this
-      }, __jsx("em", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 150
-        },
-        __self: this
-      }, item.selector)), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
+      }, item.selector), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
         gutterBottom: true,
         component: "div",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 156
         },
         __self: this
       }, __jsx("code", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 157
         },
         __self: this
       }, item.element)));
@@ -395,7 +394,7 @@ var sectionPanel = function sectionPanel(groupedIssue, issueType, stylesProps) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 187
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["ExpansionPanelSummary"], {
@@ -403,7 +402,7 @@ var sectionPanel = function sectionPanel(groupedIssue, issueType, stylesProps) {
       className: expandIconClassName,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 189
       },
       __self: this
     }),
@@ -412,20 +411,20 @@ var sectionPanel = function sectionPanel(groupedIssue, issueType, stylesProps) {
     className: panelHeaderClassName,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 188
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     component: "span",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 194
     },
     __self: this
   }, num, ". ", handle, " ", __jsx("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 190
+      lineNumber: 194
     },
     __self: this
   }, "(", count, ")"))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["ExpansionPanelDetails"], {
@@ -434,26 +433,26 @@ var sectionPanel = function sectionPanel(groupedIssue, issueType, stylesProps) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 196
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
     gutterBottom: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 197
     },
     __self: this
   }, "Info: ", __jsx("em", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 197
     },
     __self: this
   }, title)), hasSubgroup ? __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["List"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 195
+      lineNumber: 199
     },
     __self: this
   }, issues.map(function (gi) {
@@ -463,7 +462,7 @@ var sectionPanel = function sectionPanel(groupedIssue, issueType, stylesProps) {
       component: "li",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197
+        lineNumber: 201
       },
       __self: this
     }, sectionPanel(gi, issueType, stylesProps));
@@ -490,7 +489,7 @@ var IssuesList = function IssuesList(props) {
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["List"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 226
     },
     __self: this
   }, groupedIssues.map(function (gi) {
@@ -500,7 +499,7 @@ var IssuesList = function IssuesList(props) {
       component: "li",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 224
+        lineNumber: 228
       },
       __self: this
     }, sectionPanel(gi, issueType, stylesProps));
@@ -1048,7 +1047,7 @@ var TaskPageResult = function TaskPageResult(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BASE_URL", function() { return BASE_URL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GRAPHQL_URL", function() { return GRAPHQL_URL; });
-var BASE_URL = "/a11y-dashboard-gdrv";
+var BASE_URL = "/a11y-dashboard-newmar";
 var GRAPHQL_URL = "http://localhost:3037/graphql";
 
 /***/ }),
